@@ -2,6 +2,9 @@
 
 .project
 .classpath
+template/*.aux
+template/*.log
+template/*.pdf
 
 
 # Directories to ignore
