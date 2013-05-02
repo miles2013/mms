@@ -1,4 +1,11 @@
+# Config files to ignore
+
 .project
+.classpath
+
+
+# Directories to ignore
+
 build/
 .settings/
-.classpath
+latex/
