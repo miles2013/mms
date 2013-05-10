@@ -17,32 +17,37 @@ Kleines Git-HowTo:
     4.) Bei configure git sollten Name und uni-email eingetragen sein, wenn nicht, nachholen
 
   - Remote Repository auf die Platte klonen
-    1.) links unter github auf euren Nickname klicken
+    1.) links unter github auf user1391 klicken
     2.) Sicherstellen, dass in eurem Eclipse-Workspace noch kein Verzeichnis "mms" existiert
-    3.) das Repository <nickname>/mms klonen
+    3.) das Repository user1391/mms klonen       
 
-  - Einstellungen für Pulls von Maiks Repository
-    1.) Auf den Desktop wechseln
-    2.) "Git Shell" starten
-    3.) folgendes eintippen:
+  - Einen Branch zur Entwicklung erstellen
+    1.) Branch erstellen: git branch <branchname>
+    2.) In Branch wechseln: git checkout <branchname>
+    3.) Aenderungen machen
+    4.) Nach dem commit, Aenderungen die im Master inzwischen gemacht wurden, in <Branchname> "einbauen",
+        Voraussetzung ist, dass der master aktuell ist!: git rebase master
+    5.) git checkout master
+    6.) git merge --no-ff <branchname>
 
-      cd mms
-      git remote add --track master mallgoewer git://github.com/user1391/mms.git
 
-  - Euer Repository mit dem von Maik up-to-date halten
+  - Euer lokales Repository mit dem von Maik up-to-date halten
     1.) "Git Shell" starten
-    2.) eintippen: git pull --rebase mallgoewer master:master
-    3.) Macht das immer bevor ihr Änderungen von euch committet und bevor ihr eure Änderungen hochladet
+    2.) Sicherstellen, dass master aktuell ist: git checkout master
+                                                git pull --rebase
+    3.) eintippen: git checkout master
+    				git pull --rebase
+    4.) Macht das immer bevor ihr Aenderungen von euch committet und bevor ihr eure Aenderungen hochladet
 
-  - Änderungen committen und in euer Repo hochladen
+  - Aenderungen committen und in euer Repo hochladen
     1.) In der "Github" Software bei links local auf das Repo klicken
     2.) Auf den blaun Pfeil beim Repo klicken
-    3.) Ihr seht hier alle Änderungen seit dem letzen commit
-    4.) Im Feld Commit Message einen sprechenden Titel und unter Extended eine kurze Beschreibung einfügen
-    5.) Fasst die commits bitte thematisch zusammen. Ihr könnt links über die Haken auswählen, welche Änderungen zu einem commit gehören sollen
+    3.) Ihr seht hier alle Aenderungen seit dem letzen commit
+    4.) Im Feld Commit Message einen sprechenden Titel und unter Extended eine kurze Beschreibung einfuegen
+    5.) Fasst die commits bitte thematisch zusammen. Ihr koennt links ueber die Haken auswaehlen, welche Aenderungen zu einem commit gehoeren sollen
     6.) Auf commit klicken
-    7.) Durch klick auf publish werden die Änderungen in euer repository hochgeladen
+    7.) git push origin master
 
-  - Für weiterführendes bitte hier lesen:
+  - Fuer weiterfuehrendes bitte hier lesen:
       http://try.github.io/levels/1/challenges/1
       http://git-scm.com/doc
