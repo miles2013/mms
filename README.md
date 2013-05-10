@@ -51,3 +51,6 @@ Kleines Git-HowTo:
   - Fuer weiterfuehrendes bitte hier lesen:
       http://try.github.io/levels/1/challenges/1
       http://git-scm.com/doc
+
+  - Projekttagebuch Online
+      https://docs.google.com/spreadsheet/ccc?key=0AqhpFLFdA4p7dFdLaUtSRjlsUkRJZkhxRi1peUVYTHc#gid=0
