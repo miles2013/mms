@@ -5,10 +5,13 @@ import com.example.mmsvi.tabsMethod.BenutzerverwaltungImpl;
 import com.example.mmsvi.tabsMethod.HilfeImpl;
 import com.example.mmsvi.tabsMethod.HomeImpl;
 import com.example.mmsvi.tabsMethod.ModulhandbuecherImpl;
+import com.example.mmsvi.tabsMethod.VerwalteModulhandbuchModuluebersichtImpl;
+import com.example.mmsvi.tabsMethodInt.VerwalteModulhandbuchModuluebersichtInt;
 import com.example.mmsvi.tabsView.BenutzerverwaltungTabView;
 import com.example.mmsvi.tabsView.HilfeTabView;
 import com.example.mmsvi.tabsView.HomeTabView;
 import com.example.mmsvi.tabsView.ModulhandbuecherTabView;
+import com.example.mmsvi.tabsView.VerwalteModulhandbuchModuluebersichtTabView;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.UI;
@@ -25,6 +28,8 @@ public class MmsviUI extends UI {
 	private HilfeImpl hilfeImpl=new HilfeImpl();
 	private BenutzerverwaltungImpl benutzerImpl=new BenutzerverwaltungImpl();
 	private ModulhandbuecherImpl modulhandImpl=new ModulhandbuecherImpl();
+	private VerwalteModulhandbuchModuluebersichtImpl verwalteModulhandImpl 
+				= new VerwalteModulhandbuchModuluebersichtImpl();
 	
 	
 	//Create Tabs
@@ -32,6 +37,8 @@ public class MmsviUI extends UI {
 	private ModulhandbuecherTabView Modulhandbuecher=new ModulhandbuecherTabView(modulhandImpl);
 	private BenutzerverwaltungTabView Benutzerverwaltung = new BenutzerverwaltungTabView(benutzerImpl);
 	private HilfeTabView Hilfe=new HilfeTabView(hilfeImpl);
+	private VerwalteModulhandbuchModuluebersichtTabView VerwalteModulhandbuchUebersicht 
+				= new VerwalteModulhandbuchModuluebersichtTabView(verwalteModulhandImpl);
 	
 	@Override
 	protected void init(VaadinRequest request) {
@@ -47,6 +54,7 @@ public class MmsviUI extends UI {
 			t.addTab(Home,"Home");
 			t.addTab(Modulhandbuecher, "Modulhandbücher");
 			t.addTab(Benutzerverwaltung, "Benutzerverwaltung");
+			t.addTab(VerwalteModulhandbuchUebersicht, "Verwalte Modulhandbuch Uebersicht");
 			t.addTab(Hilfe,"Hilfe");
 	        content.addComponent(t);
 	}
